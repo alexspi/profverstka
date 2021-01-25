@@ -1,0 +1,381 @@
+@import "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #000;
+    font: 14px Lato,sans-serif;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6 {
+    color: #2e353d;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 38px;
+}
+
+h2 {
+    font-size: 34px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 22px;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+section {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.img-fluid {
+    height: auto;
+    max-width: 100%;
+}
+
+.inner {
+    padding: 65px 0;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 1600px;
+}
+
+header {
+    background-color: #222;
+    height: 75px;
+    padding: 18px 0;
+    width: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1140px;
+}
+
+header a {
+    background-color: #222;
+    color: #fff;
+    font-size: 26px;
+    line-height: 42px;
+}
+
+.item {
+    margin: 0 0 0 33px;
+}
+
+.search {
+    margin-right: auto;
+}
+
+.logo {
+    margin: 0 41px 0 0;
+}
+
+.slider {
+    background-color: #F1E4E6;
+    display: flex;
+}
+
+.promo-text {
+    border-left: #F16D7F solid 12px;
+    height: 92px;
+    margin: 290px 0 0 64px;
+    padding-left: 16px;
+}
+
+.promo-text p {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 58px;
+}
+
+.promo-text .sub {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38.4px;
+}
+
+.promo-text .sub span {
+    color: #F16D7F;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.m15 {
+    margin: -15px;
+}
+
+.container .category {
+    margin: 15px;
+}
+
+.row3 {
+    width: calc(100% / 3 - 30px);
+}
+
+.row1 {
+    width: calc(100% - 30px);
+}
+
+.category figure {
+    position: relative;
+}
+
+.category figure figcaption {
+    background: rgba(33,22,22,0.7);
+    display: flex;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+
+.category figure figcaption .anons {
+    margin: auto;
+}
+
+.category figure figcaption h6 {
+    color: #fff;
+    line-height: 19px;
+    margin-bottom: 0;
+}
+
+.category figure figcaption h4 {
+    color: #F16D7F;
+    line-height: 22px;
+    margin-bottom: 0;
+}
+
+#fetured .header-fetured {
+    margin: auto;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+#fetured .header-fetured h3 {
+    line-height: 36px;
+    margin-bottom: 0;
+}
+
+#fetured .header-fetured span {
+    color: #9F9F9F;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.container .fetured-item {
+    margin: 15px;
+}
+
+.fetured-item figure {
+    position: relative;
+}
+
+.fetured-item figure figcaption {
+    background: #F8F8F8;
+    padding: 18px;
+    text-align: left;
+}
+
+.fetured-item figure figcaption .title {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    padding-bottom: 12px;
+}
+
+.fetured-item figure figcaption p {
+    color: #5D5D5D;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 17px;
+    padding-bottom: 18px;
+}
+
+.fetured-item figure figcaption span {
+    color: #F16D7F;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+}
+
+#fetured .foter-fetured {
+    margin: auto;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+#fetured .foter-fetured button {
+    border: solid #F26376 1px;
+    color: #F26376;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 45px;
+    padding: 15px 39px;
+}
+
+#info {
+    background-color: #222224;
+    color: #FBFBFB;
+    padding: 100px 0;
+}
+
+#info .info-item {
+    margin: auto;
+    text-align: center;
+}
+
+.container .fetured-item {
+    margin: 15px;
+}
+
+.info-item figure {
+    position: relative;
+}
+
+.info-item figure figcaption {
+    padding: 18px;
+}
+
+.info-item figure figcaption .title {
+    color: #FBFBFB;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    padding-bottom: 16px;
+}
+
+.info-item figure figcaption p {
+    color: #FBFBFB;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 17px;
+}
+
+#sabscribe {
+    display: flex;
+    padding: 90px 0 126px;
+}
+
+#sabscribe .reviews {
+    width: 50%;
+}
+
+.reviews figure {
+    margin: auto;
+    max-width: 360px;
+    position: relative;
+    text-align: center;
+}
+
+.reviews figure img {
+    padding-bottom: 30px;
+}
+
+.reviews figure figcaption p {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+}
+
+#sabscribe .form {
+    width: 50%;
+}
+
+#sabscribe .form .sub {
+    margin: auto;
+    text-align: center;
+}
+
+#sabscribe .sub form {
+    margin-top: 32px;
+}
+
+#sabscribe .sub form input {
+    background: #E1E1E1;
+    border: 0;
+    border-radius: 15px 0 0 15px;
+    color: #222224;
+    font-size: 14px;
+    height: 50px;
+    line-height: 17px;
+    margin-right: -3px;
+    opacity: .67;
+    padding-left: 22px;
+    width: 256px;
+}
+
+#sabscribe .sub form button {
+    align-items: center;
+    background-color: #F26376;
+    border: 0;
+    border-radius: 0 15px 15px 0;
+    color: #FBFBFB;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    padding: 16px 20px;
+    text-align: center;
+}
+
+#sabscribe .sub .form-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 38px;
+}
+
+#sabscribe .sub .form-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+footer {
+    background: #222224;
+    color: #FBFBFB;
+    min-height: 80px;
+    padding: 24px 0;
+}
+
+footer .copy {
+    color: #FBFBFB;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    margin-right: auto;
+}
+
+footer .soc {
+    margin-left: 8px;
+}
