@@ -7,15 +7,22 @@
 
 body {
     color: #000;
-    font: 14px Lato,sans-serif;
+    font: 14px Lato, sans-serif;
+    font-weight: 400;
 }
 
 a {
     color: #000;
     text-decoration: none;
 }
-
-.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6 {
+ul{
+    list-style: none;
+}
+button{
+    border: none;
+    background: none;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     color: #2e353d;
     font-weight: 400;
     line-height: normal;
@@ -70,14 +77,18 @@ header {
     height: 75px;
     padding: 18px 0;
     width: 100%;
+    box-sizing: border-box;
 }
-
+header ul{
+    display: flex;
+    align-items: center;
+}
 .container {
     margin: 0 auto;
     width: 1140px;
 }
 
-header a {
+header a, header label {
     background-color: #222;
     color: #fff;
     font-size: 26px;
@@ -152,7 +163,7 @@ header a {
 }
 
 .category figure figcaption {
-    background: rgba(33,22,22,0.7);
+    background: rgba(33, 22, 22, 0.7);
     display: flex;
     height: 100%;
     position: absolute;
@@ -165,10 +176,11 @@ header a {
     margin: auto;
 }
 
-.category figure figcaption h6 {
+.category figure figcaption span {
     color: #fff;
     line-height: 19px;
     margin-bottom: 0;
+    font-size: 18px;
 }
 
 .category figure figcaption h4 {
@@ -196,26 +208,57 @@ header a {
 
 .container .fetured-item {
     margin: 15px;
+    width: 360px;
 }
 
-.fetured-item figure {
+.fetured-item .fetured-img {
     position: relative;
+    display: block;
+}
+.fetured-item .fetured-img:hover .bg{
+    display: flex;
+    transition: .3s;
+}
+.fetured-item .fetured-img .bg{
+    display: none;
+    position: absolute;
+    /*display: flex;*/
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: rgba(58, 56, 56, 0.86);
+}
+.fetured-item .fetured-img .bg img{
+   padding-right: 10px;
+}
+.fetured-item .fetured-img .bg button {
+    margin: auto;
+    background: none;
+    border: 1px solid #ffffff;
+    padding: 10px 13px;
+    color: #fff;
+    line-height: 30px;
+    font-size: 14px;
+    display: flex;
+    align-content: center;
+    box-sizing: border-box;
 }
 
-.fetured-item figure figcaption {
+
+.fetured-item .fetured-item-desk {
     background: #F8F8F8;
     padding: 18px;
     text-align: left;
 }
 
-.fetured-item figure figcaption .title {
+.fetured-item .fetured-item-desk .title {
     font-size: 13px;
     font-weight: 400;
     line-height: 16px;
     padding-bottom: 12px;
 }
 
-.fetured-item figure figcaption p {
+.fetured-item .fetured-item-desk p {
     color: #5D5D5D;
     font-size: 14px;
     font-weight: 300;
@@ -223,7 +266,7 @@ header a {
     padding-bottom: 18px;
 }
 
-.fetured-item figure figcaption span {
+.fetured-item .fetured-item-desk span {
     color: #F16D7F;
     font-size: 16px;
     font-weight: 400;
@@ -244,7 +287,24 @@ header a {
     margin-top: 45px;
     padding: 15px 39px;
 }
-
+#fetured .foter-fetured button:hover {
+    border: solid #F26376 1px;
+    color: #F8F8F8;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 45px;
+    padding: 15px 39px;
+    background: #F26376;
+}
+#fetured .foter-fetured button:active {
+    border: solid #F8F8F8 1px;
+    color: #F8F8F8;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 45px;
+    padding: 15px 39px;
+    background: #F26376;
+}
 #info {
     background-color: #222224;
     color: #FBFBFB;
@@ -256,9 +316,7 @@ header a {
     text-align: center;
 }
 
-.container .fetured-item {
-    margin: 15px;
-}
+
 
 .info-item figure {
     position: relative;
@@ -320,6 +378,7 @@ header a {
 
 #sabscribe .sub form {
     margin-top: 32px;
+    display: flex;
 }
 
 #sabscribe .sub form input {
@@ -330,7 +389,6 @@ header a {
     font-size: 14px;
     height: 50px;
     line-height: 17px;
-    margin-right: -3px;
     opacity: .67;
     padding-left: 22px;
     width: 256px;
@@ -366,6 +424,7 @@ footer {
     color: #FBFBFB;
     min-height: 80px;
     padding: 24px 0;
+    box-sizing: border-box;
 }
 
 footer .copy {
@@ -376,6 +435,101 @@ footer .copy {
     margin-right: auto;
 }
 
-footer .soc {
+footer a {
     margin-left: 8px;
+    display: flex;
+    color: #222222;
+    width: 24px;
+    height: 24px;
+    background: #FBFBFB;
 }
+
+footer a:hover {
+    color: #FBFBFB;
+    background: #F26376;
+}
+footer .soc i{
+margin: auto;
+
+    /*padding: 5px;*/
+    font-size: 14px;
+
+}
+
+/* side menu*/
+#side-checkbox {
+    display: none;
+}
+
+.side-panel {
+    position: fixed;
+    z-index: 999999;
+    left: 100%;
+    background: #ffffff;
+    transition: all 0.5s;
+    width: 232px;
+    color: #000000;
+    padding: 40px 33px;
+}
+
+.side-title {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;;
+
+}
+
+/* Переключатели кнопки 1 */
+.side-button-1 .side-close {
+    display: none;
+}
+
+
+#side-checkbox:checked + .side-panel {
+    /*left: 0;*/
+    box-shadow: -10px 0 20px rgba(0, 0, 0, 0.4);
+    left: calc(100% - 232px);
+    position: sticky;
+}
+
+/* Оформление кнопки на панеле */
+.side-button-2 {
+    font-size: 30px;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    transform: rotate(45deg);
+    color: #000000;
+    transition: all 280ms ease-in-out;
+}
+
+.side-button-2:hover {
+    transform: rotate(45deg) scale(1.1);
+    color: #FFF;
+}
+ nav ul{
+     list-style: none;
+ }
+ nav .menu-item{
+     font-size: 14px;
+     line-height: 17px;
+     color: #F16D7F;
+     text-transform: uppercase;
+     padding: 20px 0 0 0;
+ }
+
+ nav .menu-subitem{
+     font-weight: normal;
+     font-size: 14px;
+     line-height: 17px;
+     color: #6F6E6E;
+     text-transform: capitalize;
+     padding: 10px 0 0 20px;
+ }
+/*end side menu*/
