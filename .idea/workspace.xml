@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="02ddd731-2654-4028-8736-ae96c1137853" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/catalog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/cart.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/cart.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +18,20 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="SCSS File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1nY9VDlo3Y8CaYW0XosknLw66Of" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -27,10 +40,23 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/plugins/popper" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\OpenServer\domains\geekObuchenie\1chetvert\profverstka\plugins\popper" />
+      <recent name="F:\OpenServer\domains\geekObuchenie\1chetvert\profverstka\js" />
+      <recent name="F:\OpenServer\domains\geekObuchenie\1chetvert\profverstka\plugins\bootstrap" />
+      <recent name="F:\OpenServer\domains\geekObuchenie\1chetvert\profverstka\css" />
+      <recent name="F:\OpenServer\domains\geekObuchenie\1chetvert\profverstka" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\OpenServer\domains\geekObuchenie\1chetvert\profverstka\js" />
+      <recent name="F:\OpenServer\domains\geekObuchenie\1chetvert\profverstka\css" />
+      <recent name="F:\OpenServer\domains\geekObuchenie\1chetvert\profverstka\scss" />
       <recent name="F:\OpenServer\domains\geekObuchenie\1chetvert\profverstka\image" />
     </key>
   </component>
@@ -42,11 +68,28 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1611556220374</updated>
-      <workItem from="1611556252568" duration="16991000" />
+      <workItem from="1611556252568" duration="19238000" />
+      <workItem from="1611643591996" duration="1623000" />
+      <workItem from="1611660109655" duration="45270000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

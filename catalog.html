@@ -71,87 +71,75 @@
             <div class="shadow-panel"></div>
         </div>
     </header>
-    <section class="slider">
-        <img alt="" height="764" src="image/Layer57.png">
-        <div class="promo">
-            <div class="promo-text upper">
-                <span>the brand</span>
-                <p class="sub">of luxeriouse<span> fashion</span></p>
-            </div>
+    <section class="header-page">
+        <div class="container inner upper flex">
+            <h2 class="header">new arrivals</h2>
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">men</a></li>
+                <li><span>new arrivals</span></li>
+            </ul>
         </div>
-
     </section>
-    <section id="shares">
-        <div class="container inner">
-            <div class="flex m15 upper">
 
-                <div class="category">
-                    <div class="promo wow fadeInUp">
-                        <a href="#">
-                            <img alt="" height="260" src="image/item1.png"/>
-                            <div class="anons">
-                                <div class="anons-text">
-                                    <span>30% off</span>
-                                    <h4>for women</h4>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="category">
-                    <div class="promo wow fadeInUp">
-                        <a href="#">
-                            <img alt="" height="260" src="image/item3.png"/>
-                            <div class="anons">
-                                <div class="anons-text">
-                                    <span>hot deal</span>
-                                    <h4>for men</h4>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-                <div class="category">
-                    <div class="promo wow fadeInUp">
-                        <a href="#">
-                            <img alt="" height="260" src="image/item2.png"/>
-                            <div class="anons">
-                                <div class="anons-text">
-                                    <span>new arrivals</span>
-                                    <h4>for kids</h4>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-                <div class="category">
-                    <div class="promo wow fadeInUp">
-                        <a href="#">
-                            <img alt="" height="180" src="image/item4.png"/>
-
-                            <div class="anons">
-                                <div class="anons-text">
-                                    <span>luxirous & trendy</span>
-                                    <h4>accesories</h4>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-    </section>
     <section id="fetured">
-        <div class="container">
-            <div class="flex">
-                <div class="header-fetured">
-                    <h3>Fetured Items</h3>
-                    <span>Shop for items based on what we featured in this week</span>
+        <div class="container flex">
+            <div class="filter-header flex">
+                <button onclick="toggleFilter()" class="upper filter-title">filter <i class="fas fa-filter"></i>
+                </button>
+                <div id="filter-box" style="display: none" class="filter">
+                    <ul id="menu">
+                        <li><a class="upper" href="">category</a>
+                            <ul>
+                                <li><a href="">Горизонтальные меню</a></li>
+                                <li><a href="">Вертикальные меню</a></li>
+                                <li><a href="">Выпадающие меню</a></li>
+                                <li><a href="">Аккордеон</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="upper" href="">brand</a>
+                            <ul>
+                                <li><a href="">Скорость закгрузки сайта</a></li>
+                                <li><a href="">Битые ссылки</a></li>
+                                <li><a href="">Оптимизация сайта</a></li>
+                                <li><a href="">Поднятие в поисковой выдачи</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="upper" href="">disigner</a>
+                            <ul>
+                                <li><a href="">Удленитель питания</a></li>
+                                <li><a href="">ТОП 5 переходников</a></li>
+                                <li><a href="">Mac OS High Sierra</a></li>
+                                <li><a href="">Взрывы iPhone 8</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
+                <form class="upper">
+                    <select>
+                        <option class="upper" value="" disabled selected hidden>trending now</option>
+                        <option class="upper" value="xs">xs</option>
+                        <option class="upper" value="s">s</option>
+                        <option class="upper" value="m">m</option>
+                        <option class="upper" value="l">l</option>
+                    </select>
+                    <select>
+                        <option  value="" disabled selected hidden>size</option>
+                        <option value="xs">xs</option>
+                        <option value="s">s</option>
+                        <option value="m">m</option>
+                        <option value="l">l</option>
+                    </select>
+                    <select>
+                        <option value="" disabled selected hidden>prise</option>
+                        <option value="xs">xs</option>
+                        <option value="s">s</option>
+                        <option value="m">m</option>
+                        <option value="l">l</option>
+                    </select>
+                </form>
             </div>
             <div class="flex m15">
 
@@ -276,11 +264,11 @@
                     </div>
                 </div>
             </div>
-            <div class="flex">
-                <div class="foter-fetured">
+
+                <div class="flex foter-fetured">
                     <button type="button">Browse All Product</button>
                 </div>
-            </div>
+
         </div>
     </section>
     <section id="info">
@@ -359,7 +347,45 @@
         </div>
     </footer>
 </div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    function toggleFilter() {
+        var menuBox = document.getElementById('filter-box');
+        if (menuBox.style.display == "block") {
+            menuBox.style.display = "none";
+        } else {
+            menuBox.style.display = "block";
+        }
+    }
+</script>
+<script>
+    $(document).ready(function () {
+        initMenu();
+    });
 
+    function initMenu() {
+
+        $('#menu ul').hide();
+        $('#menu ul:eq(0)').show();
+
+        $('#menu li a').click(
+            function () {
+                var iselemnt = $(this).next();
+                if ((iselemnt.is('ul')) && (iselemnt.is(':visible'))) {
+                    return false;
+                }
+
+                if ((iselemnt.is('ul')) && (!iselemnt.is(':visible'))) {
+                    $('#menu ul:visible').slideUp('normal');
+                    iselemnt.slideDown('normal');
+                    return false;
+                }
+            }
+        );
+
+    }
+
+</script>
 <!--<script src="plugins/fontawesome/js/all.min.js"></script>-->
 </body>
 </html>
