@@ -751,38 +751,43 @@ footer .soc i {
     padding: 50px 0;
     width: 100%;
 }
-.filter-header form{
+
+.filter-header form {
     margin: auto;
 }
-.filter-header form select{
+
+.filter-header form select {
     text-transform: uppercase;
-    color:#6F6E6E;
+    color: #6F6E6E;
     border: none;
     margin-right: 25px;
     padding-right: 10px;
 }
-.filter-header form select option{
+
+.filter-header form select option {
     text-transform: uppercase;
-    color:#6F6E6E;
+    color: #6F6E6E;
     border: 1px solid #EBEBEB;
     background-color: #ffffff;
 }
+
 .filter-header option:active,
 .filter-header select:active,
 .filter-header select:focus,
 .filter-header button:active,
-.filter-header button:focus
-{
+.filter-header button:focus {
     outline: none;
 }
+
 .filter-header button::-moz-focus-inner {
     border: 0;
 }
 
 
-.filter:hover{
+.filter:hover {
     display: block;
 }
+
 .filter {
     position: absolute;
     z-index: 9;
@@ -850,3 +855,141 @@ ul#menu li ul li a:hover {
     /*background: #d4d3d5;*/
     padding-left: 25px;
 }
+
+#produkt-slider {
+    background-color: #F7F7F7;
+    align-items: center;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+}
+
+#produkt-slider .fa {
+    color: #000;
+    font-size: 22px;
+    padding: 13px 18px;
+    background-color: rgba(42, 42, 42, 0.15);
+}
+#produkt-slider .fa:hover{
+    color: #F16D7F;
+}
+#produkt-slider .fa-chevron-left {
+    margin-right: auto;
+}
+
+#produkt-slider .fa-chevron-right {
+    margin-left: auto;
+}
+
+#produkt-slider img {
+    padding: 10px 0 40px 0;
+    margin: auto;
+}
+#produkt-desk .container{
+    z-index: 2;
+    margin-top: -65px;
+    margin-bottom: 125px;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    text-align: center;
+    flex-direction: column;
+    padding: 65px;
+    align-items: center;
+}
+#produkt-desk .container span{
+    display: block;
+    text-align: center;
+}
+#produkt-desk .container .cat-title{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #F16D7F;
+}
+#produkt-desk .container .line-cat{
+    display: block;
+    width: 63px;
+    height: 3px;
+    background-color: #F16D7F;
+    margin: 12px 0;
+}
+#produkt-desk .container .title{
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    color: #4D4D4D;
+}
+#produkt-desk .container p{
+    display: block;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #5E5E5E;
+    max-width: 555px;
+    padding: 48px 0 32px 0;
+}
+#produkt-desk .container .price{
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #EF5B70;
+}
+#produkt-desk .container .line-price{
+    display: block;
+    width: 640px;
+    height: 1px;
+    background-color: #EAEAEA;
+    margin: 65px 0;
+}
+#produkt-desk .container .form{
+    /*display: block;*/
+    /*max-width: 380px;*/
+    /*margin: auto;*/
+}
+#produkt-desk .container .form select{
+    text-transform: uppercase;
+    color: #6F6E6E;
+    border: none;
+    margin-right: 25px;
+    padding-right: 10px;
+    margin-bottom: 48px;
+}
+
+#produkt-desk form select option {
+    text-transform: uppercase;
+    color: #6F6E6E;
+    border: 1px solid #EBEBEB;
+    background-color: #ffffff;
+
+}
+
+#produkt-desk option:active,
+#produkt-desk select:active,
+#produkt-desk select:focus{
+    outline: none;
+}
+
+#produkt-desk .container .form button{
+    border: solid #F26376 1px;
+    color: #F26376;
+    font-size: 16px;
+    line-height: 19px;
+    margin:  auto;
+
+    padding: 15px 56px 15px 23px;
+    display: flex;
+
+}
+#produkt-desk .container .form button svg{
+    fill: #F26376;
+    margin-right: auto;
+    padding-right: 23px;
+}
+#produkt-desk .container .form button:hover{
+     background-color: #F26376;
+    color: #ffffff;
+}
+#produkt-desk .container .form button:hover svg{
+    fill: #ffffff;
+   }
