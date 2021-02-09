@@ -3,39 +3,38 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Регистрация</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="plugins/fontawesome/css/all.min.css" rel="stylesheet">
-</head>
+    <link href="css/media.css" rel="stylesheet">
+    <link href="plugins/fontawesome/css/all.css" rel="stylesheet"> </head>
 
 <body>
 <div class="wrapper">
     <header>
         <div class="container flex">
-            <a class="float" href="#"><img alt="logo" class="logo" src="image/logo.png"></a>
+            <a class="float" href="index.html"><img alt="logo" class="logo" src="image/logo.png"></a>
             <form action="#" class="float search search-icon-form">
                 <input class="search-icon-form__input" id="search" type="search">
                 <label class="search-icon-form__label" for="search">
                     <svg class="search-icon-form__svg" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23.762,22.681 L17.569,16.586 C19.190,14.825 20.187,12.494 20.187,9.929 C20.186,4.443 15.668,-0.002 10.093,-0.002 C4.519,-0.002 0.001,4.443 0.001,9.929 C0.001,15.416 4.519,19.862 10.093,19.862 C12.502,19.862 14.711,19.028 16.446,17.644 L22.663,23.763 C22.966,24.062 23.458,24.062 23.761,23.763 C24.065,23.464 24.065,22.979 23.762,22.681 ZM10.093,18.334 C5.377,18.334 1.553,14.572 1.553,9.929 C1.553,5.288 5.377,1.525 10.093,1.525 C14.810,1.525 18.633,5.288 18.633,9.929 C18.633,14.572 14.810,18.334 10.093,18.334 Z"/>
-                    </svg>
+                        <path d="M23.762,22.681 L17.569,16.586 C19.190,14.825 20.187,12.494 20.187,9.929 C20.186,4.443 15.668,-0.002 10.093,-0.002 C4.519,-0.002 0.001,4.443 0.001,9.929 C0.001,15.416 4.519,19.862 10.093,19.862 C12.502,19.862 14.711,19.028 16.446,17.644 L22.663,23.763 C22.966,24.062 23.458,24.062 23.761,23.763 C24.065,23.464 24.065,22.979 23.762,22.681 ZM10.093,18.334 C5.377,18.334 1.553,14.572 1.553,9.929 C1.553,5.288 5.377,1.525 10.093,1.525 C14.810,1.525 18.633,5.288 18.633,9.929 C18.633,14.572 14.810,18.334 10.093,18.334 Z" /> </svg>
                 </label>
             </form>
             <ul>
                 <li>
-                    <label class="float item my-button-1" for="side-checkbox"><i class="fas fa-bars"></i></label>
+                    <button class="openbtn item my-button-1" onclick="openNav()">&#9776;</button>
                 </li>
-                <li>
+                <li class="sm-none">
                     <a class="float item" href="#"> <i class="far fa-user"></i></a>
                 </li>
-                <li>
+                <li class="sm-none">
                     <button class="float item"><img alt="cart" class="cart float-right" src="image/cart.png"></button>
                 </li>
             </ul>
-            <input id="side-checkbox" type="checkbox"/>
-            <div class="side-panel">
-                <label class="side-button-2" for="side-checkbox">+</label>
+            <div class="sidepanel" id="mySidemenu">
+                <label class="side-button-2" onclick="closeNav()">+</label>
                 <div class="side-title">menu</div>
                 <nav>
                     <ul>
@@ -68,40 +67,31 @@
                     </ul>
                 </nav>
             </div>
-            <div class="shadow-panel"></div>
         </div>
     </header>
     <section class="header-page">
         <div class="container inner upper flex">
-            <h2 class="header">registration</h2>
-
-        </div>
+            <h2 class="header">registration</h2> </div>
     </section>
     <section id="registration">
         <div class="container  flex">
-
-                <form class="form-register">
-                    <span class="form-title upper">Your Name</span>
-                    <input type="text" class="text" placeholder="Bangladesh">
-                    <input type="text" class="text" placeholder="State">
-                    <input type="radio" id="male" name="gender" value="male">
-                    <label for="male">Male</label>
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female">Female</label>
-                    <input type="radio" id="dis" name="gender" value="female">
-                    <label for="female">Disigner</label>
-                    <span class="form-title upper">Login details</span>
-                    <input type="email" class="text" placeholder="Bangladesh">
-                    <input type="password" class="text" placeholder="State">
-                    <p>Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase letters</p>
-                    <button type="submit" class="button upper">Join now <i class="fa fa-arrow-right"></i> </button>
-
-                </form>
-
+            <form class="form-register"> <span class="form-title upper">Your Name</span>
+                <input type="text" class="text" placeholder="Bangladesh">
+                <input type="text" class="text" placeholder="State">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="dis" name="gender" value="female">
+                <label for="female">Disigner</label> <span class="form-title upper">Login details</span>
+                <input type="email" class="text" placeholder="Bangladesh">
+                <input type="password" class="text" placeholder="State">
+                <p>Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase letters</p>
+                <button type="submit" class="button upper">Join now <i class="fa fa-arrow-right"></i> </button>
+            </form>
             <div class="register-info">
                 <h5 class="upper">loyalty has perks</h5>
-                <p>Get in on the loyalty program where you can earn points and unlock serious perks. Starting with these
-                    as soon as you join:</p>
+                <p>Get in on the loyalty program where you can earn points and unlock serious perks. Starting with these as soon as you join:</p>
                 <ul>
                     <li>15% off welcome offer</li>
                     <li>Free shipping, returns and exchanges on all orders</li>
@@ -110,10 +100,8 @@
                     <li>Exclusive offers & rewards</li>
                 </ul>
             </div>
-
         </div>
     </section>
-
     <section id="sabscribe" style="background-image: url('image/subscribe.png'); background-size: 100%">
         <div class="flex reviews">
             <figure><img alt="супер" class="img-fluid" src="image/grimza.png">
@@ -137,17 +125,21 @@
     </section>
     <footer>
         <div class="container flex">
-            <p class="copy">&copy; 2021 Brand All Rights Reserved.</p> <a class="soc" href="#"><i
-                class="fab fa-facebook-f"></i></a> <a class="soc" href="#"><i class="fab fa-instagram"></i></a> <a
-                class="soc" href="#"><i class="fab fa-pinterest-p"></i></a> <a class="soc" href="#"><i
-                class="fab fa-twitter"></i></a></div>
+            <p class="copy">&copy; 2021 Brand All Rights Reserved.</p>
+            <ul class="flex">
+                <li><a class="soc" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a class="soc" href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a class="soc" href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                <li><a class="soc" href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </div>
     </footer>
 </div>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script>
     function toggleFilter() {
         var menuBox = document.getElementById('filter-box');
-        if (menuBox.style.display == "block") {
+        if(menuBox.style.display == "block") {
             menuBox.style.display = "none";
         } else {
             menuBox.style.display = "block";
@@ -155,24 +147,17 @@
     }
 </script>
 <script>
-    $(document).ready(function () {
-        initMenu();
-    });
+    function openNav() {
+        var menu = document.getElementById('mySidemenu');
+        if(menu.classList.contains("open")) {
+            menu.classList.remove("open");
+        } else {
+            menu.classList.add("open");
+        }
+    }
 
-    function initMenu() {
-        $('#menu ul').hide();
-        $('#menu ul:eq(0)').show();
-        $('#menu li a').click(function () {
-            var iselemnt = $(this).next();
-            if ((iselemnt.is('ul')) && (iselemnt.is(':visible'))) {
-                return false;
-            }
-            if ((iselemnt.is('ul')) && (!iselemnt.is(':visible'))) {
-                $('#menu ul:visible').slideUp('normal');
-                iselemnt.slideDown('normal');
-                return false;
-            }
-        });
+    function closeNav() {
+        document.getElementById("mySidemenu").classList.remove("open");
     }
 </script>
 <!--<script src="plugins/fontawesome/js/all.min.js"></script>-->

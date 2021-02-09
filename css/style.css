@@ -1,4 +1,31 @@
-@import "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap";
+@font-face {
+    font-family: lato;
+    src: url(../fonts/lato-regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: lato;
+    src: url(../fonts/lato-bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: lato;
+    src: url(../fonts/lato-light-italic.ttf);
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: lato;
+    src: url(../fonts/lato-light.ttf);
+    font-weight: 300;
+    font-style: normal;
+}
+
 
 * {
     margin: 0;
@@ -77,7 +104,7 @@ section {
 
 .wrapper {
     margin: 0 auto;
-    width: 1600px;
+    max-width: 1600px;
 }
 
 .flex {
@@ -106,11 +133,10 @@ header ul {
 
 .container {
     margin: 0 auto;
-    width: 1140px;
+    max-width: 1140px;
 }
 
 header a, header label {
-    /*background-color: #222;*/
     color: #fff;
     font-size: 26px;
     line-height: 42px;
@@ -119,20 +145,14 @@ header a, header label {
 .search-icon-form {
     width: 30px;
     height: 30px;
-    /*margin: 0 0 0 30%;*/
     position: relative;
-    /*   border: 1px solid #fff; */
 }
 
 .search-icon-form__label {
     display: block;
     width: 100%;
     height: 100%;
-    /*   border: 1px solid green; */
     background-image: url('https://findicons.com/files/icons/2813/flat_jewels/512/search.png');
-    /*   background-size: cover;
-      background-repeat: no-repeat;
-      background-color: transparent; */
 }
 
 .search-icon-form__label:hover .search-icon-form__svg {
@@ -152,13 +172,10 @@ header a, header label {
 .search-icon-form__input {
     width: 0;
     min-height: 0;
-    /* padding: 5px; */
     outline: none;
     box-sizing: border-box;
-    /*background-color: transparent;*/
     border: none;
     position: absolute;
-    /* top: 40px; */
     left: 26px;
     color: #000000;
     font-size: 16px;
@@ -177,6 +194,113 @@ header a, header label {
     fill: #F16D7F;
 }
 
+.openbtn {
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    outline: none;
+}
+
+.sidepanel {
+    width: 0;
+    position: absolute;
+    z-index: -1;
+    top: 60px;
+    right: 0;
+    overflow-x: hidden;
+    transition: all 0.5s;
+}
+
+.open {
+    position: absolute;
+    z-index: 10;
+    top: 56px;
+    right: -232px;
+    overflow-x: hidden;
+    width: 232px;
+    color: #000000;
+    padding: 40px 33px;
+    height: 764px;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+/* Переключатели кнопки 1 */
+.side-button-1 .side-close {
+    display: none;
+}
+
+.shadow-panel {
+    z-index: 5;
+    position: absolute;
+    transition: all 0.5s;
+    height: 100%;
+    width: 0;
+    background: rgba(33, 22, 22, 0.4);
+}
+
+.side-title {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;;
+}
+
+/* Оформление кнопки на панеле */
+.side-button-2 {
+    font-size: 30px;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    transform: rotate(45deg);
+    color: #000000;
+    transition: all 280ms ease-in-out;
+}
+
+.side-button-2:hover {
+    transform: rotate(45deg) scale(1.1);
+    color: #FFF;
+}
+
+.sidepanel ul {
+    display: block;
+    list-style: none;
+}
+
+.sidepanel .menu-item {
+    font-size: 14px;
+    line-height: 17px;
+    color: #F16D7F;
+    text-transform: uppercase;
+    padding: 20px 0 0 0;
+}
+
+.sidepanel .menu-subitem {
+    margin: 5px 0;
+}
+
+.sidepanel .menu-subitem a {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6F6E6E;
+    text-transform: capitalize;
+    padding: 10px 0 0 20px;
+}
+
+
+/*end side menu*/
 .item {
     margin: 0 0 0 33px;
 }
@@ -192,8 +316,10 @@ header a, header label {
 .slider {
     background-color: #F1E4E6;
     display: flex;
+    flex-wrap: wrap;
     position: relative;
 }
+
 
 .slider .bg {
     display: none;
@@ -208,9 +334,7 @@ header a, header label {
     height: 92px;
     margin: 290px 0 0 64px;
     padding-left: 16px;
-
 }
-
 
 .promo-text .sub {
     font-size: 32px;
@@ -221,9 +345,6 @@ header a, header label {
 
 .promo-text .sub span {
     font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 38.4px;
     color: #F16D7F;
 }
 
@@ -234,7 +355,6 @@ header a, header label {
     line-height: 58px;
 }
 
-
 .m15 {
     margin: -15px;
 }
@@ -242,7 +362,6 @@ header a, header label {
 .container .category {
     margin: 15px;
 }
-
 
 .category .promo {
     position: relative;
@@ -364,7 +483,6 @@ header a, header label {
 .fetured-item .fetured-img .bg {
     display: none;
     position: absolute;
-    /*display: flex;*/
     width: 100%;
     height: 100%;
     top: 0;
@@ -387,7 +505,6 @@ header a, header label {
     align-content: center;
     box-sizing: border-box;
 }
-
 
 .fetured-item .fetured-item-desk {
     background: #F8F8F8;
@@ -418,10 +535,26 @@ header a, header label {
 }
 
 #fetured .foter-fetured {
-
     padding: 40px;
     text-align: center;
     width: 100%;
+}
+
+#fetured .foter-fetured .pagination {
+    margin: auto;
+    border: solid #EBEBEB 1px;
+    padding: 10px 15px;
+}
+
+#fetured .foter-fetured .pagination a {
+    font-size: 16px;
+    line-height: 19px;
+    padding: 5px 10px;
+}
+
+#fetured .foter-fetured .pagination a:active,
+#fetured .foter-fetured .pagination a:hover {
+    color: #F26376;
 }
 
 #fetured .foter-fetured button {
@@ -442,7 +575,6 @@ header a, header label {
 #fetured .foter-fetured button:active {
     border: solid #F8F8F8 1px;
     color: #F8F8F8;
-
     background: #F26376;
 }
 
@@ -457,7 +589,6 @@ header a, header label {
     text-align: center;
     width: 346px;
 }
-
 
 .info-item figure {
     position: relative;
@@ -600,112 +731,6 @@ footer .soc i {
     display: none;
 }
 
-.side-panel {
-    position: fixed;
-    right: -1000px;
-    /*display: none;*/
-    background: #ffffff;
-    transition: all 0.5s;
-    width: 232px;
-    color: #000000;
-    padding: 40px 33px;
-    height: 764px;
-    box-sizing: border-box;
-}
-
-/* Переключатели кнопки 1 */
-.side-button-1 .side-close {
-    display: none;
-}
-
-
-#side-checkbox:checked + .side-panel {
-    z-index: 999999;
-    box-shadow: -10px 0 20px rgba(0, 0, 0, 0.4);
-    top: 60px;
-    position: absolute;
-    right: -232px;
-
-}
-
-.shadow-panel {
-    position: fixed;
-    top: -500px;
-    display: none;
-    /*background: #ffffff;*/
-    transition: all 0.5s;
-    height: 764px;
-    box-sizing: border-box;
-}
-
-#side-checkbox:checked + .shadow-panel {
-    z-index: 11111;
-    width: 100%;
-    top: 60px;
-    display: block;
-    position: absolute;
-    background: rgba(58, 56, 56, 0.86);
-
-}
-
-.side-title {
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 17px;;
-
-}
-
-/* Оформление кнопки на панеле */
-.side-button-2 {
-    font-size: 30px;
-    border-radius: 20px;
-    position: absolute;
-    z-index: 1;
-    top: 8px;
-    right: 8px;
-    cursor: pointer;
-    transform: rotate(45deg);
-    color: #000000;
-    transition: all 280ms ease-in-out;
-}
-
-.side-button-2:hover {
-    transform: rotate(45deg) scale(1.1);
-    color: #FFF;
-}
-
-.side-panel ul {
-    display: block;
-    list-style: none;
-}
-
-.side-panel .menu-item {
-    font-size: 14px;
-    line-height: 17px;
-    color: #F16D7F;
-    text-transform: uppercase;
-    padding: 20px 0 0 0;
-}
-.side-panel .menu-subitem{
-    margin: 5px 0;
-}
-.side-panel .menu-subitem a{
-    display: block;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
-    color: #6F6E6E;
-    text-transform: capitalize;
-    padding: 10px 0 0 20px;
-
-}
-
-
-/*end side menu*/
-
 .header-page {
     background-color: #F8F3F4;
 }
@@ -781,7 +806,6 @@ footer .soc i {
     border: 0;
 }
 
-
 .filter:hover {
     display: block;
 }
@@ -790,14 +814,9 @@ footer .soc i {
     position: absolute;
     z-index: 9;
     background-color: #ffffff;
-    /*display: block;*/
     padding: 60px 10px 10px 10px;
     text-align: left;
     border: 1px solid #EBEBEB;
-    /*clip:rect(0 0 0 0);*/
-    /*width: 1px;*/
-    /*height: 1px;*/
-    /*margin: -1px;*/
 }
 
 .filter-title {
@@ -825,7 +844,6 @@ ul#menu li {
     margin-top: 1px;
 }
 
-
 ul#menu li a {
     border-bottom: 1px solid #EBEBEB;
     border-left: 5px solid #EF5B70;
@@ -837,9 +855,6 @@ ul#menu li a {
     font-size: 14px;
 }
 
-ul#menu li a:hover {
-    /*background: #757b87;*/
-}
 
 ul#menu li ul li a {
     border: none;
@@ -850,7 +865,6 @@ ul#menu li ul li a {
 }
 
 ul#menu li ul li a:hover {
-    /*background: #d4d3d5;*/
     padding-left: 25px;
 }
 
@@ -951,11 +965,6 @@ ul#menu li ul li a:hover {
     margin: 65px 0;
 }
 
-#produkt-desk .container .form {
-    /*display: block;*/
-    /*max-width: 380px;*/
-    /*margin: auto;*/
-}
 
 #produkt-desk .container .form select {
     text-transform: uppercase;
@@ -971,7 +980,6 @@ ul#menu li ul li a:hover {
     color: #6F6E6E;
     border: 1px solid #EBEBEB;
     background-color: #ffffff;
-
 }
 
 #produkt-desk option:active,
@@ -986,10 +994,8 @@ ul#menu li ul li a:hover {
     font-size: 16px;
     line-height: 19px;
     margin: auto;
-
     padding: 15px 56px 15px 23px;
     display: flex;
-
 }
 
 #produkt-desk .container .form button svg {
@@ -1081,6 +1087,7 @@ ul#menu li ul li a:hover {
     padding: 15px 40px;
     border: 1px solid #A4A4A4;
 }
+
 #cart .cart-list .shoping:active,
 #cart .cart-list .shoping:focus,
 #cart .cart-list .shoping:hover {
@@ -1118,7 +1125,6 @@ ul#menu li ul li a:hover {
     line-height: 16px;
     color: #222222;
     padding: 10px 15px;
-    display: block;
     width: 100%;
     box-sizing: border-box;
 }
@@ -1180,7 +1186,6 @@ ul#menu li ul li a:hover {
     padding: 15px 40px;
 }
 
-
 #cart .cart-info .cart-total button:focus,
 #cart .cart-info .cart-total button:active,
 #cart .cart-info .cart-total button:hover {
@@ -1191,31 +1196,37 @@ ul#menu li ul li a:hover {
     box-sizing: border-box;
     outline-color: #F16D7F;
 }
-#registration{
+
+#registration {
     padding: 64px 0 90px;
 }
-#registration .form-register{
+
+#registration .form-register {
     display: block;
     width: 40%;
     padding-right: 125px;
 }
-#registration .form-register input{
+
+#registration .form-register input {
     display: block;
 }
-#registration .register-info{
+
+#registration .register-info {
     display: block;
     width: 60%;
 }
-#registration .form-register input[type="radio"]{
+
+#registration .form-register input[type="radio"] {
     display: inline-block;
     font-size: 11px;
     line-height: 13px;
     color: #000000;
     margin: 0 0 30px 10px;
 }
+
 #registration .form-register input[type="text"],
 #registration .form-register input[type="password"],
-#registration .form-register input[type="email"]{
+#registration .form-register input[type="email"] {
     margin-bottom: 20px;
     font-weight: 300;
     font-size: 13px;
@@ -1226,7 +1237,8 @@ ul#menu li ul li a:hover {
     width: 100%;
     box-sizing: border-box;
 }
-#registration .form-register .form-title{
+
+#registration .form-register .form-title {
     display: block;
     width: 100%;
     font-weight: 300;
@@ -1235,7 +1247,8 @@ ul#menu li ul li a:hover {
     color: #222222;
     margin-bottom: 20px;
 }
-#registration .form-register p{
+
+#registration .form-register p {
     font-weight: 300;
     font-size: 13px;
     line-height: 16px;
@@ -1251,10 +1264,10 @@ ul#menu li ul li a:hover {
     outline: none;
     border: 1px solid #F16D7F;
 }
+
 #registration .form-register button .fa {
     padding-left: 10px;
 }
-
 
 #registration .form-register button:focus,
 #registration .form-register button:active,
@@ -1265,16 +1278,19 @@ ul#menu li ul li a:hover {
     box-sizing: border-box;
     outline-color: #F16D7F;
 }
+
 #registration .register-info {
     font-weight: 300;
     font-size: 24px;
     line-height: 29px;
     color: #000000;
 }
-#registration .register-info p{
- margin-bottom: 25px;
+
+#registration .register-info p {
+    margin-bottom: 25px;
 }
-#registration .register-info li{
+
+#registration .register-info li {
     padding-left: 35px;
     background-image: url(../image/check.svg);
     background-position: left;

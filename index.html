@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Главная</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <!--    <link href="scss/style.css" rel="stylesheet">-->
+    <link href="css/media.css" rel="stylesheet">
     <link href="plugins/fontawesome/css/all.css" rel="stylesheet"> </head>
-
 <body>
 <div class="wrapper">
     <header>
         <div class="container flex">
-            <a class="float" href="#"><img alt="logo" class="logo" src="image/logo.png"></a>
-            <!--            <a href="#" class="float search"> <i class="fas fa-search"></i></a>-->
+            <a class="float" href="index.html"><img alt="logo" class="logo" src="image/logo.png"></a>
             <form action="#" class="float search search-icon-form">
                 <input class="search-icon-form__input" id="search" type="search">
                 <label class="search-icon-form__label" for="search">
@@ -24,18 +22,17 @@
             </form>
             <ul>
                 <li>
-                    <label class="float item my-button-1" for="side-checkbox"><i class="fas fa-bars"></i></label>
+                    <button class="openbtn item my-button-1" onclick="openNav()">&#9776;</button>
                 </li>
-                <li>
+                <li class="sm-none">
                     <a class="float item" href="#"> <i class="far fa-user"></i></a>
                 </li>
-                <li>
+                <li class="sm-none">
                     <button class="float item"><img alt="cart" class="cart float-right" src="image/cart.png"></button>
                 </li>
             </ul>
-            <input id="side-checkbox" type="checkbox" />
-            <div class="side-panel">
-                <label class="side-button-2" for="side-checkbox">+</label>
+            <div class="sidepanel" id="mySidemenu">
+                <label class="side-button-2" onclick="closeNav()">+</label>
                 <div class="side-title">menu</div>
                 <nav>
                     <ul>
@@ -68,15 +65,15 @@
                     </ul>
                 </nav>
             </div>
-            <div class="shadow-panel"></div>
         </div>
     </header>
-    <section class="slider"> <img alt="" height="764" src="image/Layer57.png">
+    <section class="slider"> <img alt="" height="764" class="img-fluid" src="image/Layer57.png">
         <div class="promo">
-            <div class="promo-text upper"> <span>the brand</span>
+            <div class="promo-text upper"><span>the brand</span>
                 <p class="sub">of luxeriouse<span> fashion</span></p>
             </div>
         </div>
+        <div class="shadow-panel" id="menuShadow"></div>
     </section>
     <section id="shares">
         <div class="container inner">
@@ -85,8 +82,8 @@
                     <div class="promo wow fadeInUp">
                         <a href="#"> <img alt="" height="260" src="image/item1.png" />
                             <div class="anons">
-                                <div class="anons-text"> <span>30% off</span>
-                                    <h4>for women</h4> </div>
+                                <div class="anons-text"><span>30% off</span>
+                                    <h4>for women</h4></div>
                             </div>
                         </a>
                     </div>
@@ -95,8 +92,8 @@
                     <div class="promo wow fadeInUp">
                         <a href="#"> <img alt="" height="260" src="image/item3.png" />
                             <div class="anons">
-                                <div class="anons-text"> <span>hot deal</span>
-                                    <h4>for men</h4> </div>
+                                <div class="anons-text"><span>hot deal</span>
+                                    <h4>for men</h4></div>
                             </div>
                         </a>
                     </div>
@@ -105,8 +102,8 @@
                     <div class="promo wow fadeInUp">
                         <a href="#"> <img alt="" height="260" src="image/item2.png" />
                             <div class="anons">
-                                <div class="anons-text"> <span>new arrivals</span>
-                                    <h4>for kids</h4> </div>
+                                <div class="anons-text"><span>new arrivals</span>
+                                    <h4>for kids</h4></div>
                             </div>
                         </a>
                     </div>
@@ -115,8 +112,8 @@
                     <div class="promo wow fadeInUp">
                         <a href="#"> <img alt="" height="180" src="image/item4.png" />
                             <div class="anons">
-                                <div class="anons-text"> <span>luxirous & trendy</span>
-                                    <h4>accesories</h4> </div>
+                                <div class="anons-text"><span>luxirous & trendy</span>
+                                    <h4>accesories</h4></div>
                             </div>
                         </a>
                     </div>
@@ -128,11 +125,11 @@
         <div class="container">
             <div class="flex">
                 <div class="header-fetured">
-                    <h3>Fetured Items</h3> <span>Shop for items based on what we featured in this week</span> </div>
+                    <h3>Fetured Items</h3> <span>Shop for items based on what we featured in this week</span></div>
             </div>
             <div class="flex m15">
                 <div class="fetured-item ">
-                    <div class="fetured-img"> <img alt="супер" class="img-fluid" height="420" src="image/feture1.png">
+                    <div class="fetured-img"><img alt="супер" class="img-fluid" height="420" src="image/feture1.png">
                         <div class="bg">
                             <button type="button"><img alt="cart" class="cart float-right" src="image/cart.png"> Add to Cart </button>
                         </div>
@@ -144,7 +141,7 @@
                     </div>
                 </div>
                 <div class="fetured-item ">
-                    <div class="fetured-img"> <img alt="супер" class="img-fluid" height="420" src="image/feture2.png">
+                    <div class="fetured-img"><img alt="супер" class="img-fluid" height="420" src="image/feture2.png">
                         <div class="bg">
                             <button type="button"><img alt="cart" class="cart float-right" src="image/cart.png"> Add to Cart </button>
                         </div>
@@ -156,7 +153,7 @@
                     </div>
                 </div>
                 <div class="fetured-item ">
-                    <div class="fetured-img"> <img alt="супер" class="img-fluid" height="420" src="image/feture3.png">
+                    <div class="fetured-img"><img alt="супер" class="img-fluid" height="420" src="image/feture3.png">
                         <div class="bg">
                             <button type="button"><img alt="cart" class="cart float-right" src="image/cart.png"> Add to Cart </button>
                         </div>
@@ -168,7 +165,7 @@
                     </div>
                 </div>
                 <div class="fetured-item ">
-                    <div class="fetured-img"> <img alt="супер" class="img-fluid" height="420" src="image/feture4.png">
+                    <div class="fetured-img"><img alt="супер" class="img-fluid" height="420" src="image/feture4.png">
                         <div class="bg">
                             <button type="button"><img alt="cart" class="cart float-right" src="image/cart.png"> Add to Cart </button>
                         </div>
@@ -180,7 +177,7 @@
                     </div>
                 </div>
                 <div class="fetured-item ">
-                    <div class="fetured-img"> <img alt="супер" class="img-fluid" height="420" src="image/feture5.png">
+                    <div class="fetured-img"><img alt="супер" class="img-fluid" height="420" src="image/feture5.png">
                         <div class="bg">
                             <button type="button"><img alt="cart" class="cart float-right" src="image/cart.png"> Add to Cart </button>
                         </div>
@@ -192,7 +189,7 @@
                     </div>
                 </div>
                 <div class="fetured-item ">
-                    <div class="fetured-img"> <img alt="супер" class="img-fluid" src="image/feture6.png">
+                    <div class="fetured-img"><img alt="супер" class="img-fluid" src="image/feture6.png">
                         <div class="bg">
                             <button type="button"><img alt="cart" class="cart float-right" src="image/cart.png"> Add to Cart </button>
                         </div>
@@ -215,7 +212,7 @@
         <div class="container">
             <div class="flex m15">
                 <div class="info-item row3">
-                    <figure> <img alt="супер" class="img-fluid" src="image/bibi.png">
+                    <figure><img alt="супер" class="img-fluid" src="image/bibi.png">
                         <figcaption>
                             <div class="anons">
                                 <p class="title">Free Delivery</p>
@@ -225,7 +222,7 @@
                     </figure>
                 </div>
                 <div class="info-item row3">
-                    <figure> <img alt="супер" class="img-fluid" src="image/sale.png">
+                    <figure><img alt="супер" class="img-fluid" src="image/sale.png">
                         <figcaption>
                             <div class="anons">
                                 <p class="title">Sales & discounts</p>
@@ -235,7 +232,7 @@
                     </figure>
                 </div>
                 <div class="info-item row3">
-                    <figure> <img alt="супер" class="img-fluid" src="image/king.png">
+                    <figure><img alt="супер" class="img-fluid" src="image/king.png">
                         <figcaption>
                             <div class="anons">
                                 <p class="title">Quality assurance</p>
@@ -249,7 +246,7 @@
     </section>
     <section id="sabscribe" style="background-image: url('image/subscribe.png'); background-size: 100%">
         <div class="flex reviews">
-            <figure> <img alt="супер" class="img-fluid" src="image/grimza.png">
+            <figure><img alt="супер" class="img-fluid" src="image/grimza.png">
                 <figcaption>
                     <div class="anons">
                         <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“</p>
@@ -270,9 +267,34 @@
     </section>
     <footer>
         <div class="container flex">
-            <p class="copy">&copy; 2021 Brand All Rights Reserved.</p> <a class="soc" href="#"><i class="fab fa-facebook-f"></i></a> <a class="soc" href="#"><i class="fab fa-instagram"></i></a> <a class="soc" href="#"><i class="fab fa-pinterest-p"></i></a> <a class="soc" href="#"><i class="fab fa-twitter"></i></a> </div>
+            <p class="copy">&copy; 2021 Brand All Rights Reserved.</p>
+            <ul class="flex">
+                <li><a class="soc" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a class="soc" href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a class="soc" href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                <li><a class="soc" href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </div>
     </footer>
 </div>
+<script>
+    function openNav() {
+        var menu = document.getElementById('mySidemenu');
+        var shadow = document.getElementById('menuShadow');
+        if(menu.classList.contains("open")) {
+            menu.classList.remove("open");
+            shadow.style.width = "0";
+        } else {
+            menu.classList.add("open");
+            shadow.style.width = "100%";
+        }
+    }
+
+    function closeNav() {
+        document.getElementById("mySidemenu").classList.remove("open");
+        document.getElementById('menuShadow').style.width = "0";
+    }
+</script>
 <!--<script src="plugins/fontawesome/js/all.min.js"></script>-->
 </body>
 

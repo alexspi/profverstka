@@ -3,18 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Каталог</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <!--    <link href="scss/style.css" rel="stylesheet">-->
-    <link href="plugins/fontawesome/css/all.min.css" rel="stylesheet"> </head>
+    <link href="css/media.css" rel="stylesheet">
+    <link href="plugins/fontawesome/css/all.css" rel="stylesheet"> </head>
 
 <body>
 <div class="wrapper">
     <header>
         <div class="container flex">
-            <a class="float" href="#"><img alt="logo" class="logo" src="image/logo.png"></a>
-            <!--            <a href="#" class="float search"> <i class="fas fa-search"></i></a>-->
+            <a class="float" href="index.html"><img alt="logo" class="logo" src="image/logo.png"></a>
             <form action="#" class="float search search-icon-form">
                 <input class="search-icon-form__input" id="search" type="search">
                 <label class="search-icon-form__label" for="search">
@@ -24,18 +24,17 @@
             </form>
             <ul>
                 <li>
-                    <label class="float item my-button-1" for="side-checkbox"><i class="fas fa-bars"></i></label>
+                    <button class="openbtn item my-button-1" onclick="openNav()">&#9776;</button>
                 </li>
-                <li>
+                <li class="sm-none">
                     <a class="float item" href="#"> <i class="far fa-user"></i></a>
                 </li>
-                <li>
+                <li class="sm-none">
                     <button class="float item"><img alt="cart" class="cart float-right" src="image/cart.png"></button>
                 </li>
             </ul>
-            <input id="side-checkbox" type="checkbox" />
-            <div class="side-panel">
-                <label class="side-button-2" for="side-checkbox">+</label>
+            <div class="sidepanel" id="mySidemenu">
+                <label class="side-button-2" onclick="closeNav()">+</label>
                 <div class="side-title">menu</div>
                 <nav>
                     <ul>
@@ -68,7 +67,6 @@
                     </ul>
                 </nav>
             </div>
-            <div class="shadow-panel"></div>
         </div>
     </header>
     <section class="header-page">
@@ -84,7 +82,7 @@
     <section id="fetured">
         <div class="container flex">
             <div class="filter-header flex">
-                <button onclick="toggleFilter()" class="upper filter-title">filter <i class="fas fa-filter"></i> </button>
+                <button onclick="toggleFilter()" class="upper filter-title"><span class="sm-none">filter</span> <i class="fas fa-filter"></i> </button>
                 <div id="filter-box" style="display: none" class="filter">
                     <ul id="menu">
                         <li><a class="upper" href="">category</a>
@@ -212,7 +210,7 @@
                 </div>
             </div>
             <div class="flex foter-fetured">
-                <button type="button">Browse All Product</button>
+                <div class="pagination"> <a href="#"><i class="fa fa-chevron-left"></i></a> <a href="#">1</a> <a href="#" class="active">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#">6</a> <a href="#"><i class="fa fa-chevron-right"></i></a> </div>
             </div>
         </div>
     </section>
@@ -275,11 +273,31 @@
     </section>
     <footer>
         <div class="container flex">
-            <p class="copy">&copy; 2021 Brand All Rights Reserved.</p> <a class="soc" href="#"><i class="fab fa-facebook-f"></i></a> <a class="soc" href="#"><i class="fab fa-instagram"></i></a> <a class="soc" href="#"><i class="fab fa-pinterest-p"></i></a> <a class="soc" href="#"><i class="fab fa-twitter"></i></a> </div>
+            <p class="copy">&copy; 2021 Brand All Rights Reserved.</p>
+            <ul class="flex">
+                <li><a class="soc" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a class="soc" href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a class="soc" href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                <li><a class="soc" href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </div>
     </footer>
 </div>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script>
+    function openNav() {
+        var menu = document.getElementById('mySidemenu');
+        if(menu.classList.contains("open")) {
+            menu.classList.remove("open");
+        } else {
+            menu.classList.add("open");
+        }
+    }
+
+    function closeNav() {
+        document.getElementById("mySidemenu").classList.remove("open");
+    }
+
     function toggleFilter() {
         var menuBox = document.getElementById('filter-box');
         if(menuBox.style.display == "block") {
