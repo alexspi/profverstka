@@ -448,7 +448,9 @@ header a, header label {
     opacity: 1;
     transform: scale(1);
 }
-
+ .rel-prod{
+    margin-bottom: 120px;
+}
 #fetured .header-fetured {
     margin: auto;
     padding-bottom: 40px;
