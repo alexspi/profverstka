@@ -201,7 +201,8 @@ header a, header label {
     padding: 10px 15px;
     border: none;
 }
-
+.openbtn:active,
+.openbtn:focus,
 .openbtn:hover {
     outline: none;
 }
