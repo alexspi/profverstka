@@ -231,9 +231,7 @@ header a, header label {
 }
 
 /* Переключатели кнопки 1 */
-.side-button-1 .side-close {
-    display: none;
-}
+
 
 .shadow-panel {
     z-index: 5;
@@ -254,7 +252,7 @@ header a, header label {
 }
 
 /* Оформление кнопки на панеле */
-.side-button-2 {
+.side-button-menu {
     font-size: 30px;
     border-radius: 20px;
     position: absolute;
@@ -266,10 +264,12 @@ header a, header label {
     color: #000000;
     transition: all 280ms ease-in-out;
 }
-
-.side-button-2:hover {
+.side-button-menu .side-close {
+    display: none;
+}
+.side-button-menu:hover {
     transform: rotate(45deg) scale(1.1);
-    color: #FFF;
+    color: #F16D7F;
 }
 
 .sidepanel ul {
